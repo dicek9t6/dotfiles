@@ -1,7 +1,7 @@
 DOTFILES := $(shell pwd)
 HOMEBREW_PACKAGES := starship zsh-autosuggestions zsh-syntax-highlighting
 
-.PHONY: install zsh ghostty starship brew
+.PHONY: install zsh ghostty starship brew karabiner
 
 install: brew zsh ghostty starship
 
@@ -28,6 +28,12 @@ starship:
 	@echo "==> Linking Starship config..."
 	@mkdir -p $(HOME)/.config
 	@$(MAKE) _symlink SRC=$(DOTFILES)/.config/starship.toml DST=$(HOME)/.config/starship.toml
+
+# MacBook Air (US layout) only — not included in install
+karabiner:
+	@echo "==> Linking Karabiner config (MacBook Air US layout)..."
+	@mkdir -p $(HOME)/.config/karabiner
+	@$(MAKE) _symlink SRC=$(DOTFILES)/.config/karabiner/karabiner.json DST=$(HOME)/.config/karabiner/karabiner.json
 
 _symlink:
 	@if [ -e "$(DST)" ] && [ ! -L "$(DST)" ]; then \
