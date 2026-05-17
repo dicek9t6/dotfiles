@@ -11,6 +11,7 @@ My personal dotfiles.
 | [Starship](https://starship.rs) | Prompt |
 | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) | Command suggestions |
 | [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | Syntax highlighting |
+| [Karabiner-Elements](https://karabiner-elements.pqrs.org) | Key remapping (MacBook Air US layout) |
 
 ## Setup
 
@@ -32,6 +33,7 @@ make install
 make zsh       # ~/.zshrc
 make ghostty   # ~/.config/ghostty/config
 make starship  # ~/.config/starship.toml
+make karabiner # ~/.config/karabiner/karabiner.json (MacBook Air US layout only)
 ```
 
 ## Structure
@@ -43,9 +45,69 @@ dotfiles/
 │   │   └── .zshrc          # Zsh config and aliases
 │   ├── ghostty/
 │   │   └── config          # Ghostty appearance and keybindings
+│   ├── karabiner/
+│   │   └── karabiner.json  # Key remapping for MacBook Air US layout
 │   └── starship.toml       # Starship prompt theme (gruvbox dark)
 ├── Makefile
 └── README.md
+```
+
+## Ghostty Keybindings
+
+### Pane
+
+| Key | Action |
+|-----|--------|
+| `Ctrl+Shift+V` | Split right |
+| `Ctrl+Shift+H` | Split down |
+| `Ctrl+H/J/K/L` | Navigate pane left/down/up/right |
+| `Ctrl+,` / `Ctrl+.` | Resize pane left/right |
+| `Ctrl+;` / `Ctrl+'` | Resize pane down/up |
+| `Ctrl+X` | Close pane |
+
+### Scroll
+
+| Key | Action |
+|-----|--------|
+| `Ctrl+Shift+K` | Scroll up 3 lines |
+| `Ctrl+Shift+J` | Scroll down 3 lines |
+
+### Editing
+
+| Key | Action |
+|-----|--------|
+| `Shift+Enter` | Insert newline without submitting |
+| `Alt+Backspace` / `Shift+Backspace` | Delete word |
+
+## Karabiner (MacBook Air US layout)
+
+### Key Remapping
+
+```
+┌──────────┬──────────┬──────────┬──────────┐
+│ Caps Lock│  Ctrl    │  Option  │ Command  │
+│    ↓     │    ↓     │    ↓     │    ↓     │
+│  Ctrl    │  Option  │ Command  │   Fn     │
+└──────────┴──────────┴──────────┴──────────┘
+```
+
+### Fn Layer
+
+```
+┌─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┐
+│  Q  │  W  │  E  │  R  │  T  │   │  Y  │  U  │  I  │  O  │  P  │
+│     │     │  ↑  │     │     │   │     │PgUp │  ↑  │PgDn │     │
+├─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┤
+│  A  │  S  │  D  │  F  │  G  │   │  H  │  J  │  K  │  L  │  ;  │
+│Home │  ←  │  ↓  │  →  │ End │   │ BS  │  ←  │  ↓  │  →  │ Del │
+├─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┤
+│  Z  │  X  │  C  │  V  │  B  │   │  N  │  M  │  ,  │  .  │     │
+│     │     │     │     │     │   │     │Mute │Vol- │Vol+ │     │
+└─────┴─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┴─────┘
+                    ┌─────────────────┐
+                    │      Space      │
+                    │      Enter      │
+                    └─────────────────┘
 ```
 
 ## Aliases
