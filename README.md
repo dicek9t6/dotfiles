@@ -10,6 +10,7 @@ My personal dotfiles.
 | [Zsh](https://www.zsh.org) | Shell |
 | [Starship](https://starship.rs) | Prompt |
 | [fzf](https://github.com/junegunn/fzf) | Fuzzy finder |
+| [nb](https://github.com/xwmx/nb) | Note-taking CLI |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | Smart directory navigation |
 | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) | Command suggestions |
 | [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | Syntax highlighting |
