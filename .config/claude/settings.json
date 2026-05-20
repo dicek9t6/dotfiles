@@ -1,5 +1,10 @@
 {
   "effortLevel": "high",
   "includeCoAuthoredBy": false,
-  "statuslineLayout": "bottom-right"
+  "statuslineLayout": "bottom",
+  "statuslineSegments": ["model", "token-usage"],
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.config/claude/statusline-command.sh"
+  }
 }

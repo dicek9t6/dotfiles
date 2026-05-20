@@ -157,6 +157,18 @@ Note-taking CLI:
 | `nb b` | Web UI (browse/manage) |
 | `nglow <id>` | View note as formatted markdown (with glow) |
 
+## Claude Code Statusline
+
+Displays at the bottom of Claude Code:
+- Model name
+- Git branch (when in a git repo)
+- Context window usage
+- Output tokens from last response
+- Rate limits (API key users)
+- Session name (when using `/rename`)
+
+Powered by `.config/claude/statusline-command.sh`
+
 ## Aliases
 
 Aliases defined in `.zshrc`:
