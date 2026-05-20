@@ -43,6 +43,10 @@ fcat() {
   fzf --preview 'cat {}' | xargs cat
 }
 
+nglow() {
+  nb show "${1:-1}" | glow
+}
+
 #### zoxide ####
 eval "$(zoxide init zsh)"
 alias cd='z'

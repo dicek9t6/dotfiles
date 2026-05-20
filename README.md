@@ -10,6 +10,7 @@ My personal dotfiles.
 | [Zsh](https://www.zsh.org) | Shell |
 | [Starship](https://starship.rs) | Prompt |
 | [fzf](https://github.com/junegunn/fzf) | Fuzzy finder |
+| [glow](https://github.com/charmbracelet/glow) | Markdown viewer |
 | [nb](https://github.com/xwmx/nb) | Note-taking CLI |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | Smart directory navigation |
 | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) | Command suggestions |
@@ -154,6 +155,7 @@ Note-taking CLI:
 | `nb d <id>` | Delete note |
 | `nb q <query>` | Search notes |
 | `nb b` | Web UI (browse/manage) |
+| `nglow <id>` | View note as formatted markdown (with glow) |
 
 ## Aliases
 

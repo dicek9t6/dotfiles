@@ -1,5 +1,5 @@
 DOTFILES := $(shell pwd)
-HOMEBREW_PACKAGES := fzf nb starship zoxide zsh-autosuggestions zsh-syntax-highlighting
+HOMEBREW_PACKAGES := fzf glow nb starship zoxide zsh-autosuggestions zsh-syntax-highlighting
 
 .PHONY: install zsh ghostty starship claude brew karabiner
 
