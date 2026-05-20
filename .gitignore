@@ -1,3 +1,7 @@
 .DS_Store
 **/.DS_Store
 .config/zsh/hidden/
+
+# Claude Code secrets (local/auth)
+.claude/settings.local.json
+.claude/auth.json

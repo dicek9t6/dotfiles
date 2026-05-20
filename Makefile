@@ -1,9 +1,9 @@
 DOTFILES := $(shell pwd)
 HOMEBREW_PACKAGES := fzf starship zoxide zsh-autosuggestions zsh-syntax-highlighting
 
-.PHONY: install zsh ghostty starship brew karabiner
+.PHONY: install zsh ghostty starship claude brew karabiner
 
-install: brew zsh ghostty starship
+install: brew zsh ghostty starship claude
 
 brew:
 	@if ! command -v brew >/dev/null 2>&1; then \
@@ -28,6 +28,11 @@ starship:
 	@echo "==> Linking Starship config..."
 	@mkdir -p $(HOME)/.config
 	@$(MAKE) _symlink SRC=$(DOTFILES)/.config/starship.toml DST=$(HOME)/.config/starship.toml
+
+claude:
+	@echo "==> Linking Claude Code config..."
+	@mkdir -p $(HOME)/.claude
+	@$(MAKE) _symlink SRC=$(DOTFILES)/.config/claude/settings.json DST=$(HOME)/.claude/settings.json
 
 # MacBook Air (US layout) only — not included in install
 karabiner:
