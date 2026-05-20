@@ -2,9 +2,9 @@
 **/.DS_Store
 .config/zsh/hidden/
 
-# Claude Code secrets (local/auth)
-.claude/settings.local.json
-.claude/auth.json
+# Claude Code config secrets
+.config/claude/settings.local.json
+.config/claude/*.local.*
 
 # Vim/Neovim
 .vim/
