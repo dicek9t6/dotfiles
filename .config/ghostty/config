@@ -37,10 +37,7 @@ keybind = ctrl+shift+v=new_split:right
 keybind = ctrl+shift+h=new_split:down
 
 # =========================
-# Close pane
-# =========================
-keybind = ctrl+x=close_surface
-
+# Resize panes
 # =========================
 # Resize panes
 # =========================
