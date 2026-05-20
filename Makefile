@@ -21,8 +21,8 @@ zsh:
 
 ghostty:
 	@echo "==> Linking Ghostty config..."
-	@mkdir -p $(HOME)/.config/ghostty
-	@$(MAKE) _symlink SRC=$(DOTFILES)/.config/ghostty/config DST=$(HOME)/.config/ghostty/config
+	@mkdir -p $(HOME)/.config
+	@$(MAKE) _symlink SRC=$(DOTFILES)/.config/ghostty DST=$(HOME)/.config/ghostty
 
 starship:
 	@echo "==> Linking Starship config..."
