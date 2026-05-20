@@ -1,7 +1,7 @@
 # =========================
-# Appearance 
+# Appearance
 # =========================
-font-size = 14 
+font-size = 14
 theme = Tomorrow Night
 palette = 8=#626880
 cursor-style = block
@@ -9,6 +9,7 @@ mouse-hide-while-typing = true
 window-padding-balance = true
 window-save-state = always
 window-colorspace = "display-p3"
+macos-option-as-alt = true
 
 # =========================
 # Breakline 
