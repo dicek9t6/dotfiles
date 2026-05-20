@@ -1,4 +1,5 @@
 {
   "effortLevel": "high",
-  "includeCoAuthoredBy": false
+  "includeCoAuthoredBy": false,
+  "statuslineLayout": "bottom-right"
 }
