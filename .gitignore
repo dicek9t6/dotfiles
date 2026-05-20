@@ -5,3 +5,23 @@
 # Claude Code secrets (local/auth)
 .claude/settings.local.json
 .claude/auth.json
+
+# Vim/Neovim
+.vim/
+.config/nvim/.netrwhist
+.config/nvim/plugin/packer_compiled.lua
+*.swp
+*.swo
+*~
+.backup/
+.undo/
+
+# VSCode
+.vscode/settings.json
+.vscode/extensions.json
+
+# npm/nvm
+.npmrc
+.nvmrc
+node_modules/
+.npm/
