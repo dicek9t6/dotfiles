@@ -44,7 +44,7 @@ fcat() {
 }
 
 nglow() {
-  nb show "${1:-1}" | glow -
+  nb show --no-color "${1:-1}" | glow -
 }
 
 #### zoxide ####
