@@ -30,7 +30,7 @@ fi
 if [ -f "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh" ]; then
   source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
 fi
-export FZF_DEFAULT_OPTS="--height 40% --reverse --multi --preview 'cat {}' --preview-window right:30%"
+export FZF_DEFAULT_OPTS="--height 40% --reverse --multi --preview 'cat {}' --preview-window right:30% --bind 'shift-up:preview-up,shift-down:preview-down'"
 
 #### fzf functions ####
 fvim() {
