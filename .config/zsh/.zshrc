@@ -32,6 +32,11 @@ if [ -f "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh" ]; then
 fi
 export FZF_DEFAULT_OPTS="--height 40% --reverse --multi"
 
+#### zoxide ####
+eval "$(zoxide init zsh)"
+alias cd='z'
+alias cdi='zi'
+
 #### History search with arrow keys #####
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
