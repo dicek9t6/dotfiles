@@ -30,7 +30,18 @@ fi
 if [ -f "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh" ]; then
   source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
 fi
-export FZF_DEFAULT_OPTS="--height 40% --reverse --multi"
+export FZF_DEFAULT_OPTS="--height 40% --reverse --multi --preview 'cat {}' --preview-window right:30%"
+
+#### fzf functions ####
+fvim() {
+  local file
+  file=$(fzf --preview 'cat {}')
+  [ -n "$file" ] && vim "$file"
+}
+
+fcat() {
+  fzf --preview 'cat {}' | xargs cat
+}
 
 #### zoxide ####
 eval "$(zoxide init zsh)"
