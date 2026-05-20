@@ -141,6 +141,20 @@ cd par             # Jump to recently visited directory matching "par"
 cdi                # Fuzzy select from history with fzf
 ```
 
+## nb Usage
+
+Note-taking CLI:
+
+| Command | Purpose |
+|---------|---------|
+| `nb a` | Create new note |
+| `nb ls` | List notes |
+| `nb <id>` | Show note |
+| `nb e <id>` | Edit note |
+| `nb d <id>` | Delete note |
+| `nb q <query>` | Search notes |
+| `nb b` | Web UI (browse/manage) |
+
 ## Aliases
 
 Aliases defined in `.zshrc`:
