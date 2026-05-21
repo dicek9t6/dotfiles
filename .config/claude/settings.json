@@ -1,10 +1,45 @@
 {
   "effortLevel": "high",
   "includeCoAuthoredBy": false,
-  "statuslineLayout": "bottom",
-  "statuslineSegments": ["model", "token-usage"],
+  "permissions": {
+    "allow": [
+      "bash:read-files",
+      "bash:grep",
+      "bash:find",
+      "bash:list-files",
+      "git:read-operations",
+      "git:diff",
+      "Bash(gh issue view *)",
+      "Bash(gh issue list *)",
+      "Bash(gh pr view *)",
+      "Bash(gh pr list *)",
+      "Bash(gh pr status *)",
+      "Bash(gh repo view *)",
+      "Bash(gh status *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(jq *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [{
+      "matcher": "Bash(git commit *)",
+      "hooks": [{
+        "type": "prompt",
+        "prompt": "You're about to commit. Confirm you want to proceed with: $ARGUMENTS"
+      }]
+    }]
+  },
   "statusLine": {
     "type": "command",
     "command": "bash ~/.config/claude/statusline-command.sh"
-  }
+  },
+  "statuslineLayout": "bottom",
+  "statuslineSegments": [
+    "model",
+    "token-usage"
+  ]
 }
