@@ -3,12 +3,12 @@
   "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
-      "bash:read-files",
-      "bash:grep",
-      "bash:find",
-      "bash:list-files",
-      "git:read-operations",
-      "git:diff",
+      "Bash(cat *)",
+      "Bash(grep *)",
+      "Bash(find *)",
+      "Bash(ls *)",
+      "Git(log *)",
+      "Git(diff *)",
       "Bash(gh issue view *)",
       "Bash(gh issue list *)",
       "Bash(gh pr view *)",
