@@ -18,6 +18,8 @@ brew:
 zsh:
 	@echo "==> Linking zsh config..."
 	@$(MAKE) _symlink SRC=$(DOTFILES)/.config/zsh/.zshrc DST=$(HOME)/.zshrc
+	@mkdir -p $(HOME)/.config/zsh/hidden
+	@echo "    Created $(HOME)/.config/zsh/hidden (for machine-local secrets)"
 
 ghostty:
 	@echo "==> Linking Ghostty config..."
