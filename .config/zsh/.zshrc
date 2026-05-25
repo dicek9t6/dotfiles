@@ -52,6 +52,16 @@ eval "$(zoxide init zsh)"
 alias cd='z'
 alias cdi='zi'
 
+#### History ####
+HISTSIZE=100000
+SAVEHIST=100000
+setopt EXTENDED_HISTORY        # タイムスタンプと実行時間を記録
+setopt HIST_IGNORE_ALL_DUPS    # 重複を削除（古い方を消す）
+setopt INC_APPEND_HISTORY_TIME # 都度追記（終了時ではなく実行後すぐ）
+setopt HIST_REDUCE_BLANKS      # 余分なスペースを正規化
+setopt HIST_IGNORE_SPACE       # スペース始まりのコマンドは記録しない
+#setopt SHARE_HISTORY          # 複数ターミナル共有（INC_APPEND_HISTORY_TIMEと排他）
+
 #### History search with arrow keys #####
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
@@ -77,3 +87,4 @@ if [ -d "$HIDDEN_ALIASES_DIR" ]; then
   done
 fi
 
+export PATH="$HOME/.local/bin:$PATH"
